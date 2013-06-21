@@ -1,0 +1,20 @@
+# This file defines the menus on the website. See the documentation for
+# details: http://docs.bolt.cm/menus
+
+main:
+  - label: Accueil
+    path: homepage
+    class: first
+  - label: Démarche
+    path: page/2
+  - label: Offre
+    path: page/3
+  - label: Management
+    link: http://bolt.cm
+  - label: Références
+    link: http://bolt.cm
+  - label: Partenaires
+    link: http://bolt.cm
+  - label: Contact
+    link: http://bolt.cm
+    class: last
