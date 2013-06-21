@@ -82,3 +82,9 @@ Currently, these are the third party extensions we're aware of:
 
 The extensions can be placed in the `app/extensions` folder.
 Learn more about writing extensions from our [docs](https://github.com/bolt/bolt-docs/blob/master/source/extensions.md)
+=======
+bolt.ad
+=======
+
+cfsa
+>>>>>>> branch 'master' of https://github.com/Yw0ke/bolt.ad.git
