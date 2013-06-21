@@ -16,3 +16,5 @@ web
 theme/mybolt/
 
 *.sublime-*
+/.buildpath
+/.project
