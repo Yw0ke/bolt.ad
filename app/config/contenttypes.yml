@@ -58,6 +58,8 @@ pages:
         teaser:
             type: html
             height: 150px
+        imagelist:
+            type: imagelist
         body:
             type: html
             height: 300px

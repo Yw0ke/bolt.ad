@@ -1,0 +1,179 @@
+@media only screen and (min-width: 950px) {
+	header #intro {
+		margin-left: 65px;
+	}
+
+	#demarche .etape {
+		width: 558px;
+		height: 347px;
+		margin-left: 0;
+	}
+
+	#demarche .etape .visuel {
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 890px) {
+	#home .slide-2 img {
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 880px) {
+	header #intro {
+		margin-left: 40px;
+	}
+
+	#offre .texte {
+		width: 40%;
+		padding: 0;
+		margin-left: 90px;
+	}
+	
+	#offre img {
+		display: block;
+	}
+
+	#slide-offre #slide-offre-1 .next {
+		display: block !important;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	header #intro {
+		width: 65%;
+	}
+}
+
+@media only screen and (min-width: 660px) {
+	header #main-menu li {
+		margin: 0 10px;
+	}
+}
+
+@media only screen and (min-width: 625px) {
+	header {
+		position: fixed;
+	}
+
+	header #intro {
+		display: block;
+	}
+
+	#home .slide-2 .step {
+		float: left;
+		width: 160px;
+		padding: 0;
+		margin-left: 35px;
+	}
+
+	#offre #programme {
+		top: 120px;
+		left: 400px;
+		-moz-transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+
+	#management > ul {
+		margin: 30px 50px 20px 50px;
+	}
+
+		#management > ul > li {
+			padding: 0 10px 19px 0;
+			float: left;
+			width: 50%;
+		}
+
+		#management > ul > li.right {
+			padding: 0 0 19px 10px;
+		}
+}
+
+@media only screen and (min-width: 585px) {
+	#contact-form form {
+		width: 538px;
+		margin: 0 auto;
+	}
+
+	#contact-form .col-champs {
+		float: left;
+		margin: 0 20px 0 0;
+	}
+
+	#contact-form .col-message {
+		width: 270px;
+		float: left;
+	}
+}
+
+@media only screen and (min-width: 525px) {
+	#references ul {
+		margin: 30px 90px 20px 90px;
+	}
+
+		#references ul li {
+			float: left;
+			width: 50%;
+			padding: 0 10px 20px 0;
+		}
+
+		#references ul li.right {
+			padding: 0 0 20px 10px;
+		}
+
+	#contacts #gmap {
+		float: left;
+		width: 60%;
+		padding-left: 50px;
+		margin: 0 0 30px 0;
+	}
+
+	#contacts #coordonnees {
+		float: left;
+		width: 40%;
+		padding: 0 50px 0 20px;
+	}
+}
+
+@media only screen and (min-width: 400px) {
+	#demarche > ul {
+		float: left;
+		width: 372px;
+	}
+
+	#demarche > ul a .numero-etape {
+		display: block;
+	}
+
+	#demarche > ul a .nom-etape {
+		padding: 8px 0 0 78px;
+	}
+
+	#demarche .analyse {
+		height: 66px;
+		background: url(../../../files/CFSA/analyse.png) no-repeat 0 0;
+	}
+
+	#demarche .plan {
+		height: 54px;
+		background: url(../../../files/CFSA/plan.png) no-repeat 0 0;
+	}
+
+	#demarche .structuration {
+		height: 55px;
+		background: url(../../../files/CFSA/structuration.png) no-repeat 0 0;
+	}
+
+	#demarche .developpement {
+		height: 55px;
+		background: url(../../../files/CFSA/developpement.png) no-repeat 0 0;
+	}
+
+	#partenaires ul li {
+		margin: 0 26px 50px 25px;
+	}
+}

@@ -2,88 +2,593 @@
 
 <!-- Main Page Content and Sidebar -->
 
-<div class="row">
+
 
     <!-- Main Blog Content -->
-    <div class="eight columns" role="content">
-
-        <article>
-
-            {# use 'setcontent' to set the variable 'home' to "page/1", which is
-               shorthand for "the record in Pages, with id 1". #}
-            {% setcontent home = "page/1" %}
-            {% if home.title is defined and home.title is not empty %}
-                <h1>{{ home.title }}</h1>
-            {% endif %}
-
-            {% if home.image is defined and home.image is not empty %}
-                <div class="five columns imageholder">
-                    <a href="{{ image(home.image) }}">
-                        <img src="{{ thumbnail(home.image, 400, 260) }}">
-                    </a>
-                </div>
-            {% endif %}
-
-            {# display something introduction-like.. #}
-            {% if home.introduction is defined and home.introduction is not empty %}
-                {{ home.introduction }}
-            {% elseif home.teaser is defined and home.teaser is not empty %}
-                {{ home.teaser }}
-            {% elseif home is not empty %}
-                <p>{{ home.excerpt(500) }}</p>
-            {% endif %}
-
-            {% if home.link is defined and home.link is not empty %}
-                <a href="{{ home.link }}">Read more &raquo;</a>
-            {% endif %}
-
-            {# Tip: If you're curious what all of the available fields of this
-               record contain, just use {{ print(home) }}, to print it all. #}
-
-        </article>
-
-        <hr>
-
-        <h4>{{ __('Latest entries') }}</h4>
-
-        {# Here we use 'setcontent' to set the variable 'records' to "entries/latest/6",
-           which is shorthand for "the 6 latest records in Entries. Note that we are
-           requesting multiple entries, so 'records' will be an array containing each
-           of the entries. That's why we use the 'for' loop to iterate over them all. #}
-        {% setcontent records = "entries/latest/6" allowpaging %}
-        {% for record in records %}
-            <article>
-
-                {% if record.image!="" %}
-                    <div class="three columns imageholder">
-                        <a href="{{ image(record.image) }}">
-                            <img src="{{ thumbnail(record.image, 400, 260) }}">
-                        </a>
-                    </div>
-                {% endif %}
-
-                <h3><a href="{{ record.link }}">{{ record.title }}</a></h3>
-
-                <p>{{ record.excerpt(220) }}</p>
-
-            </article>
-
-            <hr>
-
-        {% endfor %}
-
-
-        {{ pager() }}
-
-
-    </div>
+    
+		<div class="wrap maincontent">
+			<div id="home" class="cf">
+	               <div class="slide slide-1">
+	                    <div class="container">
+	                        <h2 class="editable"><!-- contentEditable="true" -->
+	                            Pourquoi<br/>
+	                            mettre<br/>
+	                            en place<br/>
+	                            un programme<br/>
+	                            affinitaire ?
+	                        </h2>
+	                        <!-- <button class="save-edition">Enregistrer</button> -->
+	
+	                        <a href="#_" id="slide-home-next">Slide home</a>
+	                    </div>
+	                </div>
+	
+	                <div class="slide slide-2">
+	                    <div class="container editable"><!-- contentEditable="true" -->
+	                        <h2>Améliorer la satisfaction client</h2>
+	
+	                        <div class="step">
+	                            <p class="numero">1</p>
+	                            
+	                            <p>Faciliter l'achat et l'utilisation du bien ou du service grâce à une offre clef en main incluant financement, assurance et assistance</p>
+	                        </div>
+	
+	                        <div class="step">
+	                            <p class="numero">2</p>
+	
+	                            <p>Répondre à la demande croissante de protection et de garanties dans un contexte économique et social incertain</p>
+	                        </div>
+	
+	                        <div class="step">
+	                            <p class="numero">3</p>
+	
+	                            <p>Proposer des services additionnels à des tarifs préférentiels dans une logique de fidélisation et de gestion de la relation client/adhérent</p>
+	                        </div>
+	
+	                        <img src="files/CFSA/illus-accueil.jpg" alt="Illustration" />
+	
+	                        <a href="#_" id="slide-home-prev">Slide home</a>
+	                    </div>
+	                    <!-- <button class="save-edition">Enregistrer</button> -->
+	                </div>
+	            </div>
+	
+	            <div class="local-link container-arrow">
+	                <a href="#demarche" class="step-arrow">Démarche</a>
+	            </div>
+	
+	            <div id="demarche" class="cf">
+	                <h2>La démarche CFSA</h2>
+					
+	                <ul>
+	                    <li class="cf">
+	                        <a href="#etape-1" class="analyse">
+	                            <span class="numero-etape">1</span>
+	                            <span class="nom-etape cf">
+	                                <span>Analyse stratégique<br/>des opportunités</span>
+	                                <span class="pointe"></span>
+	                            </span>
+	                        </a>
+	                    </li>
+	                    <li class="cf">
+	                        <a href="#etape-2" class="plan">
+	                            <span class="numero-etape">2</span>
+	                            <span class="nom-etape cf">
+	                                <span>Plan d'affaires affinitaire</span>
+	                                <span class="pointe"></span>
+	                            </span>
+	                        </a>
+	                    </li>
+	                    <li class="cf">
+	                        <a href="#etape-3" class="structuration">
+	                            <span class="numero-etape">3</span>
+	                            <span class="nom-etape cf">
+	                                <span>Structuration du programme</span>
+	                                <span class="pointe"></span>
+	                            </span>
+	                        </a>
+	                    </li>
+	                    <li class="cf">
+	                        <a href="#etape-4" class="developpement">
+	                            <span class="numero-etape">4</span>
+	                            <span class="nom-etape cf">
+	                                <span>Développement & Gestion<br/>du programme</span>
+	                                <span class="pointe"></span>
+	                            </span>
+	                        </a>
+	                    </li>
+	                </ul>
+	
+	                <div id="slide-demarche" class="cf">
+	                    <div id="etape-1" class="etape">
+	                        <div class="texte">
+	                            <span class="numero">Étape 1 //<br/>Analyse stratégique des opportunités</span>
+	
+	                            <ul class="editable"><!-- contentEditable="true" -->
+	                                <li>Identification des opportunités</li>
+	                                <li>Benchmark du marché et de la concurrence</li>
+	                                <li>Identification des programmes possibles</li>
+	                                <li>Choix des programmes à analyser</li>
+	                            </ul>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	                        </div>
+	
+	                        <div class="visuel">
+	                            <p><span>Le + CFSA :</span>Le conseil</p>
+	                        </div>
+	                    </div>
+	
+	                    <div id="etape-2" class="etape">
+	                        <div class="texte">
+	                            <span class="numero">Étape 2 //<br/>Plan d'affaires affinitaire</span>
+	
+	                            <ul class="editable"><!-- contentEditable="true" -->
+	                                <li>Positionnement dans la chaine de valeur</li>
+	                                <li>Identification des partenaires potentiels</li>
+	                                <li>Scénarios de Revenus</li>
+	                                <li>Retour sur Investissement</li>
+	                            </ul>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	                        </div>
+	
+	                        <div class="visuel">
+	                            <p><span>Le + CFSA :</span>La transparence</p>
+	                        </div>
+	                    </div>
+	
+	                    <div  id="etape-3" class="etape">
+	                        <div class="texte">
+	                            <span class="numero">Étape 3 //<br/>Structuration du programme</span>
+	
+	                            <ul class="editable"><!-- contentEditable="true" -->
+	                                <li>Sélection des porteurs de risques Assurance/Crédit</li>
+	                                <li>Sélection des prestataires de services </li>
+	                                <li>Choix des modes de distribution</li>
+	                                <li>Conception et tarification du produit</li>
+	                                <li>Définition du processus de vente et de gestion</li>
+	                                <li>Formation des équipes aux arguments de vente</li>
+	                            </ul>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	                        </div>
+	
+	                        <div class="visuel">
+	                            <p><span>Le + CFSA :</span>L'innovation</p>
+	                        </div>
+	                    </div>
+	
+	                    <div  id="etape-4" class="etape">
+	                        <div class="texte">
+	                            <span class="numero">Étape 4 //<br/>Développement & Gestion du programme</span>
+	
+	                            <ul class="editable"><!-- contentEditable="true" -->
+	                                <li>Définition et suivi de la stratégie commerciale</li>
+	                                <li>Animation d'actions commerciales</li>
+	                                <li>Gestion des contrats</li>
+	                                <li>Collecte des primes</li>
+	                                <li>Gestion des sinistres</li>
+	                                <li>Reporting et analyse des résultats</li>
+	                                <li>Veille sur l'évolution du marché</li>
+	                            </ul>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	                        </div>
+	
+	                        <div class="visuel">
+	                            <p><span>Le + CFSA :</span>L'efficacité</p>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	
+	            <div class="local-link container-arrow">
+	                <a href="#offre" class="step-arrow">Offre</a>
+	            </div>
+	
+	            <div id="offre">
+	                <h2>L'offre CFSA</h2>
+	
+	                <div id="slide-offre" class="cf">
+	                    <div id="slide-offre-1" class="cf">
+	                        <div class="texte">
+	                            <h3 class="editable"><!-- contentEditable="true" -->Une couverture de l'ensemble des besoins clients particuliers et professionnels</h3>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	
+	                            <p class="editable"><!-- contentEditable="true" -->CFSA va au delà des solutions génériques traditionnelles, en créant pour vous un programme affinitaire sur mesure</p>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	                        </div>
+	
+	                        <div id="programme">
+	                            <p>Programme affinitaire<br/>by CFSA</p>
+	
+	                            <a href="#slide-offre-2" class="service fidelisation">Fidélisation et Gestion de la Relation Client</a>
+	                            <a href="#slide-offre-3" class="service paiements">Paiements et crédit</a>
+	                            <a href="#slide-offre-4" class="service assistance">Services d'assistance</a>
+	                            <a href="#slide-offre-5" class="service assurance">Garanties d'assurance</a>
+	                        </div>
+	
+	                        <img src="files/CFSA/offre.png" alt="Illustration" class="illus" />
+	
+	                        <a href="#_" class="next">Suivant</a>
+	                    </div>
+	
+	                    <div id="slide-offre-2" class="cf">
+	                        <div class="texte">
+	                            <p>Fidélisation et gestion de la relation client</p>
+	
+	                            <ul class="editable"><!-- contentEditable="true" -->
+	                                <li>Mise en place et gestion de cartes de fidélité (Particuliers) ou de programmes de fidélisation (Professionnels et Entreprises)</li>
+	                                <li>Création et exploitation des bases de données clients (mailing, télémarketing, courtage en fichiers)</li>
+	                                <li>Animation et formation des réseaux de distribution pour les clients fidélisés (jeux, concours, catalogues)</li>
+	                                <li>Support commercial de terrain / marketing opérationnel</li>
+	                            </ul>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	
+	                        </div>
+	
+	                        <img src="files/CFSA/offre-fidelisation.png" alt="Illustration" class="illus" />
+	
+	                        <a href="#_" class="retour">Retour</a>
+	
+	                        <a href="#_" class="prev">Précédent</a>
+	
+	                        <a href="#_" class="next">Suivant</a>
+	                    </div>
+	
+	                    <div id="slide-offre-3" class="cf">
+	                        <div class="texte">
+	                            <p>Paiements et crédits</p>
+	
+	                            <ul class="editable"><!-- contentEditable="true" -->
+	                                <li>Mise en place et gestion de cartes de paiement carte co-brandée / carte privative</li>
+	                                <li>Crédits à la consommation : crédits affectés, crédits renouvelables, prêt personnels</li>
+	                                <li>Proposition de paiements fractionnés en plusieurs fois sans frais</li>
+	                            </ul>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	
+	                        </div>
+	
+	                        <img src="files/CFSA/offre-paiements.png" alt="Illustration" class="illus" />
+	
+	                        <a href="#_" class="retour">Retour</a>
+	
+	                        <a href="#_" class="prev">Précédent</a>
+	
+	                        <a href="#_" class="next">Suivant</a>
+	                    </div>
+	
+	                    <div id="slide-offre-4" class="cf">
+	                        <div class="texte">
+	                            <p>Services d'assistance</p>
+	
+	                            <ul class="editable"><!-- contentEditable="true" -->
+	                                <li>Services à la famille et à la personne (garde d'enfants, aide à domicile en cas d'accident, assistance pour les femmes enceintes)</li>
+	                                <li>Services pour la vie quotidienne et le domicile (contrôle de la consommation d'énergie, travaux de bricolage, assistance dépannage électricité et gaz, assistance juridique, assistance garde d'animaux,...)</li>
+	                                <li>Services aux personnes dépendantes / âgées (téléassistance, téléconsultation, aides à domicile)</li>
+	                                <li>Assistance voyage : assistance psychologique / helpline, hébergement, rapatriement sanitaire</li>
+	                                <li>Assistance / Dépannage sur véhicules et machines professionnels</li>
+	                                <li>.../...</li>
+	                            </ul>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	                        </div>
+	
+	                        <img src="files/CFSA/offre-assistance.png" alt="Illustration" class="illus" />
+	
+	                        <a href="#_" class="retour">Retour</a>
+	
+	                        <a href="#_" class="prev">Précédent</a>
+	
+	                        <a href="#_" class="next">Suivant</a>
+	                    </div>
+	
+	                    <div id="slide-offre-5" class="cf">
+	                        <div class="texte">
+	                            <p>Garanties d'assurance</p>
+	
+	                            <ul class="editable"><!-- contentEditable="true" -->
+	                                <li>Auto, 2 Roues</li>
+	                                <li>Maison</li>
+	                                <li>Equipements</li>
+	                                <li>Santé</li>
+	                                <li>Enfants </li>
+	                                <li>Prévoyance </li>
+	                                <li>Annulation / Interruption de Voyages</li>
+	                                <li>Annulation / Interruption de Loisirs</li>
+	                                <li>Garanties moyens de paiements,<br/>perte et vol papiers d'identité</li>
+	                                <li>Objets de luxe</li>
+	                                <li>.../...</li>
+	                            </ul>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	                        </div>
+	
+	                        <img src="files/CFSA/offre-assurance.png" alt="Illustration" class="illus" />
+	
+	                        <a href="#_" class="retour">Retour</a>
+	
+	                        <a href="#_" class="prev">Précédent</a>
+	
+	                        <a href="#_" class="next">Suivant</a>
+	                    </div>
+	                </div>
+	            </div>
+	
+	            <div class="local-link container-arrow">
+	                <a href="#management" class="step-arrow">Management</a>
+	            </div>
+	
+	            <div id="management">
+	                <h2>Management</h2>
+	
+	                <ul class="cf">
+	                    <li>
+	                        <div class="carte cf editable"><!-- contentEditable="true" -->
+	                            <img src="files/CFSA/emmanuel-coutelle.jpg" alt="Emmanuel Coutelle" />
+	                            <p class="nom">Emmanuel Coutelle</p>
+	                            <p class="fonction">Président Directeur Général</p>
+	                            <ul>
+	                                <li>Expérience de consultant spécialiste du secteur de l'assurance chez Accenture (Predica, Aviva, Allianz, Gan Groupama)</li>
+	                                <li>Ex Directeur Financier et membre du Comité Exécutif de Winterthur France</li>
+	                                <li>Dirigeant et principal actionnaire de Temeris, courtier de référence du secteur de la Santé</li>
+	                                <li>Diplômé de l'Ecole de Management de Lyon (EM Lyon)</li>
+	                            </ul>
+	                        </div>
+	                        <!-- <button class="save-edition">Enregistrer</button> -->
+	                    </li>
+	
+	                    <li class="right">
+	                        <div class="carte cf editable"><!-- contentEditable="true" -->
+	                            <img src="files/CFSA/enguerran-brembilla.jpg" alt="Enguerran Brembilla" />
+	                            <p class="nom">Enguerran Brembilla</p>
+	                            <p class="fonction">Directeur des Opérations</p>
+	                            <ul>
+	                                <li>Expérience de consultant dans les secteurs de la Grande Distribution et de la Banque-Assurance</li>
+	                                <li>Ex Responsable des offres et de la stratégie de distribution directe, également en charge des sites web marchands et du pilotage de la vente à distance chez Generali France</li>
+	                                <li>Titulaire d'un Diplôme d'Etudes Approfondies de Mathématiques de l'Université de Paris 6</li>
+	                            </ul>
+	                        </div>
+	                        <!-- <button class="save-edition">Enregistrer</button> -->
+	                    </li>
+	
+	                    <li>
+	                        <div class="carte cf editable"><!-- contentEditable="true" -->
+	                            <img src="files/CFSA/patrice-faviere.jpg" alt="Patrice Favière" />
+	                            <p class="nom">Patrice Favière</p>
+	                            <p class="fonction">Directeur Marketing et Commercial</p>
+	                            <ul>
+	                                <li>Expérience marketing et commerciale chez Procter & Gamble, Kraft et Vivendi Universal</li>
+	                                <li>Fondateur de Marketing and Co, cabinet de conseil en marketing et stratégie de marques</li>
+	                                <li>Diplômé de l'Ecole de Management de Lyon (EM Lyon) et coach certifié (PNL et Vincent Lenhardt)</li>
+	                            </ul>
+	                        </div>
+	                        <!-- <button class="save-edition">Enregistrer</button> -->
+	                    </li>
+	
+	                    <li class="right">
+	                        <div class="carte cf editable"><!-- contentEditable="true" -->
+	                            <img src="files/CFSA/pierre-bustamante.jpg" alt="Pierre Bustamante" />
+	                            <p class="nom">Pierre Bustamante</p>
+	                            <p class="fonction">Senior Adviser</p>
+	                            <ul>
+	                                <li>A occupé diverses fonctions de management en assurances et en banque, ainsi que dans les branches conseil de firmes Big 4</li>
+	                                <li>Dirigeant et co-Fondateur de la firme internationale Chappuis Halder & Cie, spécialisée dans le conseil au secteur Banque-Assurance</li>
+	                                <li>Diplômé de l'Ecole Supérieure de Commerce de Paris (ESCP), MBA Program de l'Université du Texas, Maîtrise de Droit des Affaires de Paris 2</li>
+	                            </ul>
+	                        </div>
+	                        <!-- <button class="save-edition">Enregistrer</button> -->
+	                    </li>
+	                    
+	                </ul>
+	            </div>
+	
+	            <div class="local-link container-arrow">
+	                <a href="#references" class="step-arrow">Références</a>
+	            </div>
+	
+	            <div id="references">
+	                <h2>Références</h2>
+	                
+	                <ul class="cf">
+	                    <li>
+	                        <div class="carte cf">
+	                            <img src="files/CFSA/tati.jpg" alt="Tati" />
+	                            <p class="editable"><!-- contentEditable="true" -->Construction et pilotage du premier programme de fidélisation de l'enseigne</p>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	                        </div>
+	                    </li>
+	
+	                    <li class="right">
+	                        <div class="carte cf">
+	                            <img src="files/CFSA/enviedefraises.jpg" alt="Envie de fraises" />
+	                            <p class="editable"><!-- contentEditable="true" -->Construction et pilotage du premier programme d'assistance dédié aux femmes enceintes et aux jeunes mamans</p>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	                        </div>
+	                    </li>
+	
+	                    <li>
+	                        <div class="carte cf">
+	                            <img src="files/CFSA/directenergie.jpg" alt="Direct Energie" />
+	                            <p class="editable"><!-- contentEditable="true" -->Construction et pilotage de l'ensemble des options d'assistance pour la clientèle des particuliers et des professionnels</p>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	                        </div>
+	                    </li>
+	
+	                    <li class="right">
+	                        <div class="carte cf">
+	                            <img src="files/CFSA/leaderdescliniques.jpg" alt="Leader des cliniques" />
+	                            <p class="editable"><!-- contentEditable="true" -->Construction et pilotage d'un programme d'assistance « Retour à Domicile » pour les cliniques du groupe</p>
+	                            <!-- <button class="save-edition">Enregistrer</button> -->
+	                        </div>
+	                    </li>
+	                </ul>
+	            </div>
+	
+	            <div class="local-link container-arrow">
+	                <a href="#partenaires" class="step-arrow">Partenaires</a>
+	            </div>
+	
+	            <div id="partenaires">
+	                <h2>Partenaires</h2>
+	
+	                <ul class="cf">
+	                    <li><img src="files/CFSA/partenaires/ace.jpg" alt="ACE" /></li>
+	                    <li><img src="files/CFSA/partenaires/aig.jpg" alt="AIG" /></li>
+	                    <li><img src="files/CFSA/partenaires/allianz.jpg" alt="Allianz" /></li>
+	                    <li><img src="files/CFSA/partenaires/altima.jpg" alt="Altima" /></li>
+	                    <li><img src="files/CFSA/partenaires/axa.jpg" alt="AXA" /></li>
+	                    <li><img src="files/CFSA/partenaires/axa-assistance.jpg" alt="AXA Assistance" /></li>
+	                    <li><img src="files/CFSA/partenaires/banque-accord.jpg" alt="Banque Accord" /></li>
+	                    <li><img src="files/CFSA/partenaires/banque-casino.jpg" alt="Banque Casino" /></li>
+	                    <li><img src="files/CFSA/partenaires/chubb.jpg" alt="Chubb" /></li>
+	                    <li><img src="files/CFSA/partenaires/cofinoga.jpg" alt="Cofinoga" /></li>
+	                    <li><img src="files/CFSA/partenaires/covea.jpg" alt="Covéa" /></li>
+	                    <li><img src="files/CFSA/partenaires/europ-assurance.jpg" alt="Europ Assurance" /></li>
+	                    <li><img src="files/CFSA/partenaires/ge-capital.jpg" alt="GE Capital" /></li>
+	                    <li><img src="files/CFSA/partenaires/ge-money-bank.jpg" alt="GE Money Bank" /></li>
+	                    <li><img src="files/CFSA/partenaires/generali.jpg" alt="Generali" /></li>
+	                    <li><img src="files/CFSA/partenaires/lequite-assurance.jpg" alt="L'Equité assurances" /></li>
+	                    <li><img src="files/CFSA/partenaires/metlife.jpg" alt="MetLife" /></li>
+	                    <li><img src="files/CFSA/partenaires/mondial-assistance.jpg" alt="Mondial Assistance" /></li>
+	                    <li><img src="files/CFSA/partenaires/swiss-life.jpg" alt="Swiss Life" /></li>
+	                </ul>
+	            </div>
+	
+	            <div class="local-link container-arrow">
+	                <a href="#contacts" class="step-arrow">Contacts</a>
+	            </div>
+	
+	            <div id="contacts" class="cf">
+	                <h2>Contact</h2>
+	
+	                <div id="gmap">
+	                    <iframe width="512" height="266" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=8+Rue+la+Fayette,+Paris,+France&amp;aq=2&amp;oq=8+rue+la+&amp;sll=43.280391,5.380496&amp;sspn=0.337421,0.837021&amp;ie=UTF8&amp;hq=&amp;hnear=8+Rue+la+Fayette,+75009+Paris,+%C3%8Ele-de-France,+France&amp;t=m&amp;ll=48.873296,2.334251&amp;spn=0.015017,0.043859&amp;z=14&amp;iwloc=near&amp;output=embed"></iframe>
+	                </div>
+	
+	                <div id="coordonnees">
+	                    <div class="adresse">
+	                        <p>
+	                            <strong>CFSA<br/>
+	                            Affinity Solutions</strong><br/>
+	                            8 rue La Fayette<br/>
+	                            75009 Paris
+	                        </p>
+	                    </div>
+	
+	                    <div class="acces">
+	                        <p>
+	                            <strong>Accès</strong><br/>
+	                            Métro : Chaussée d'Antin - La Fayette - Lignes 7 et 9<br/>
+	                            RER : Auber - Ligne A
+	                        </p>
+	
+	                        <p>
+	                            Tel : 01 44 69 90 55<br/>
+	                            Fax : 01 42 93 93 60
+	                        </p>
+	                    </div>
+	
+	                    <div class="plus">
+	                        <p>
+	                            Pour plus d'informations,<br/>
+	                            vous pouvez nous contacter par mail :<br/>
+	                            <a href="mailto:info@cfsaffinity.com" target="_blank">info@cfsaffinity.com</a>
+	                        </p>
+	
+	                        <p class="local-link">
+	                            Vous avez une question ?<br/>
+	                            <a href="#contact-form">Cliquez ici pour être recontacté</a> par nos équipes
+	                        </p>
+	                    </div>
+	                </div>
+	            </div>
+	
+	            <div class="local-link container-arrow">
+	                <a href="#contact-form" class="step-arrow">Formulaire</a>
+	            </div>
+	
+	            <div id="contact-form">
+	                <?php if( !isset($emailMessage)  ): ?>
+	                <p>Merci de remplir le formulaire ci-dessous afin que nous puissions vous contacter rapidement</p>
+	
+	                <form id="formStep" action="index.php#contact-form" method="POST">
+	                    <p>Vos coordonnées</p>
+	
+	                    <div class="col-champs">
+	                        <div>
+	                            <label for="civilite">Civilité*</label>
+	                            <select name="civilite" id="civilite" required="required">
+	                                <option value=""></option>
+	                                <option value="mlle">Mlle</option>
+	                                <option value="mme">Mme</option>
+	                                <option value="m">M</option>
+	                            </select>
+	                        </div>
+	
+	                        <div>
+	                            <label for="nom">Nom*</label>
+	                            <input type="text" name="nom" id="nom" required="required" />
+	                        </div>
+	
+	                        <div>
+	                            <label for="prenom">Prénom</label>
+	                            <input type="text" name="prenom" id="prenom" />
+	                        </div>
+	
+	                        <div>
+	                            <label for="email">Email*</label>
+	                            <input type="text" name="email" id="email" required="required" />
+	                        </div>
+	
+	                        <div>
+	                            <label for="fonction">Fonction*</label>
+	                            <input type="text" name="fonction" id="fonction" required="required" />
+	                        </div>
+	
+	                        <div>
+	                            <label for="societe">Sociéte*</label>
+	                            <input type="text" name="societe" id="societe" required="required" />
+	                        </div>
+	
+	                        <div>
+	                            <label for="activite">Activité</label>
+	                            <input type="text" name="activite" id="activite" />
+	                        </div>
+	
+	                        <div>
+	                            <label for="adresse">Adresse</label>
+	                            <input type="text" name="adresse" id="adresse" />
+	                        </div>
+	
+	                        <div>
+	                            <label for="cp">Code postal</label>
+	                            <input type="text" name="cp" id="cp" pattern="[O-9]*"/>
+	                        </div>
+	
+	                        <div>
+	                            <label for="telephone">Téléphone*</label>
+	                            <input type="text" name="telephone" id="telephone" required="required" />
+	                        </div>
+	                        <div>
+	                            <input type="text" name="info" id="info" value="" />
+	                        </div>
+	                    </div>
+	
+	                    <div class="col-message">
+	                        <label for="message">Votre message</label>
+	                        <textarea name="message" id="message" required="required"></textarea>
+	
+	                        <input type="submit" value="Valider" />
+	                    </div>
+	
+	                    <p class="small">* champs obligatoires</p>
+	                </form>
+	                <?php else: ?>
+	                    <p>Votre message a bien été envoyé</p>
+	                    <?php echo $confirm; ?>
+	                <?php endif; ?>
+	            </div>
+    
 
     <!-- End Main Content -->
-    {# include the sidebar. The include tag can be used to break up your templates in logical parts, 
-       and re-use them across different templates/pages. #}
-    {% include '_aside.twig' %}
+   
 
-</div>
 
 <!-- End Main Content and Sidebar -->
 
