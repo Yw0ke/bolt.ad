@@ -24,9 +24,42 @@ managers:
         fonction:
             type: text
             class: large
-        text:
-            type: textarea
-    taxonomy: [ tags ]
+        text_fr:
+            type: html
+        text_en:
+            type: html
+    record_template: entry.twig
+    listing_template: listing.twig
+    listing_records: 10
+    sort: datepublish DESC
+    recordsperpage: 10
+
+références:
+    name: Références
+    singular_name: Référence
+    fields:
+        name:
+            type: text
+        photo:
+            type: image
+        text_fr:
+            type: html
+        text_en:
+            type: html
+    record_template: entry.twig
+    listing_template: listing.twig
+    listing_records: 10
+    sort: datepublish DESC
+    recordsperpage: 10
+
+partenaires:
+    name: Partenaires
+    singular_name: Partenaire
+    fields:
+        name:
+            type: text
+        photo:
+            type: image
     record_template: entry.twig
     listing_template: listing.twig
     listing_records: 10

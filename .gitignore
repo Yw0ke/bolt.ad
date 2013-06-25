@@ -3,8 +3,8 @@ app/cache/*
 app/database/*.db
 app/extensions/AlbumPager
 app/extensions/AlbumPager/*
-files/*
 vendor/
+files/*
 composer.phar
 .DS_Store
 ._.DS_Store

@@ -155,22 +155,22 @@
 
 	#demarche .analyse {
 		height: 66px;
-		background: url(../../../files/CFSA/analyse.png) no-repeat 0 0;
+		background: url(../images/analyse.png) no-repeat 0 0;
 	}
 
 	#demarche .plan {
 		height: 54px;
-		background: url(../../../files/CFSA/plan.png) no-repeat 0 0;
+		background: url(../images/plan.png) no-repeat 0 0;
 	}
 
 	#demarche .structuration {
 		height: 55px;
-		background: url(../../../files/CFSA/structuration.png) no-repeat 0 0;
+		background: url(../images/structuration.png) no-repeat 0 0;
 	}
 
 	#demarche .developpement {
 		height: 55px;
-		background: url(../../../files/CFSA/developpement.png) no-repeat 0 0;
+		background: url(../images/developpement.png) no-repeat 0 0;
 	}
 
 	#partenaires ul li {

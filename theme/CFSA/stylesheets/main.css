@@ -74,11 +74,11 @@ textarea { resize: vertical; }
 	width: 31px;
 	height: 31px;
 	text-indent: -9999px;
-	background: url(../../../files/CFSA/step-arrow.png) no-repeat 0 0;
+	background: url(../images/step-arrow.png) no-repeat 0 0;
 }
 
 body {
-	background: url(../../../files/CFSA/background.jpg) repeat 0 0;
+	background: url(../images/background.jpg) repeat 0 0;
 }
 
 .wrap {
@@ -103,7 +103,7 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: url(../../../files/CFSA/header.jpg) repeat 0 0;
+	background: url(../images/header.jpg) repeat 0 0;
 	z-index: 9999;
 }
 
@@ -196,7 +196,7 @@ header {
 #home .slide {
 	float: left;
 	padding: 12px 12px 18px 12px;
-	background: url(../../../files/CFSA/accueil-shadow.png) no-repeat bottom right;
+	background: url(../images/accueil-shadow.png) no-repeat bottom right;
 }
 
 	#home .slide .container {
@@ -207,7 +207,7 @@ header {
 	}
 
 	#home .slide-1 .container {
-		background: url(../../../files/CFSA/accueil.jpg) no-repeat 0 0;
+		background: url(../images/accueil.jpg) no-repeat 0 0;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-ms-background-size: cover;
@@ -237,7 +237,7 @@ header {
 		width: 54px;
 		height: 54px;
 		text-indent: -9999px;
-		background: url(../../../files/CFSA/fleche-blanche-d.png) no-repeat 0 0;
+		background: url(../images/fleche-blanche-d.png) no-repeat 0 0;
 	}
 
 	#home .slide-2 .container {
@@ -264,7 +264,7 @@ header {
 		font-size: 24px;
 		color: #fff;
 		text-align: center;
-		background: url(../../../files/CFSA/numero-accueil.png) no-repeat center 0;
+		background: url(../images/numero-accueil.png) no-repeat center 0;
 	}
 
 	#home .slide-2 p {
@@ -283,7 +283,7 @@ header {
 		bottom: 20px;
 		right: auto;
 		left: 35px;
-		background: url(../../../files/CFSA/fleche-bleue-g.png) no-repeat 0 0;
+		background: url(../images/fleche-bleue-g.png) no-repeat 0 0;
 	}
 
 /* DEMARCHE */
@@ -355,7 +355,7 @@ header {
 	}
 
 	#demarche .analyse .nom-etape .pointe {
-		background: url(../../../files/CFSA/analyse-fleche.png) no-repeat 0 0;
+		background: url(../images/analyse-fleche.png) no-repeat 0 0;
 	}
 
 
@@ -375,7 +375,7 @@ header {
 	}
 
 	#demarche .plan .nom-etape .pointe {
-		background: url(../../../files/CFSA/plan-fleche.png) no-repeat 0 0;
+		background: url(../images/plan-fleche.png) no-repeat 0 0;
 	}
 
 
@@ -392,7 +392,7 @@ header {
 
 	#demarche .structuration .nom-etape .pointe {
 		height: 47px;
-		background: url(../../../files/CFSA/structuration-fleche.png) no-repeat 0 0;
+		background: url(../images/structuration-fleche.png) no-repeat 0 0;
 	}
 
 
@@ -409,7 +409,7 @@ header {
 
 	#demarche .developpement .nom-etape .pointe {
 		height: 47px;
-		background: url(../../../files/CFSA/developpement-fleche.png) no-repeat 0 0;
+		background: url(../images/developpement-fleche.png) no-repeat 0 0;
 	}
 
 #demarche .etape {
@@ -456,7 +456,7 @@ header {
 			font-weight: bold;
 			text-align: center;
 			color: #fff;
-			background: url(../../../files/CFSA/etape-1.png) no-repeat 0 0;
+			background: url(../images/etape-1.png) no-repeat 0 0;
 		}
 
 			#demarche .etape .visuel span {
@@ -478,15 +478,15 @@ header {
 	}
 
 	#demarche #etape-2 .visuel {
-		background: url(../../../files/CFSA/etape-2.png) no-repeat 0 0;
+		background: url(../images/etape-2.png) no-repeat 0 0;
 	}
 
 	#demarche #etape-3 .visuel {
-		background: url(../../../files/CFSA/etape-3.png) no-repeat 0 0;
+		background: url(../images/etape-3.png) no-repeat 0 0;
 	}
 
 	#demarche #etape-4 .visuel {
-		background: url(../../../files/CFSA/etape-4.png) no-repeat 0 0;
+		background: url(../images/etape-4.png) no-repeat 0 0;
 	}
 
 /* OFFRE */
@@ -530,7 +530,7 @@ header {
 		color: #fff;
 		text-align: center;
 		text-transform: uppercase;
-		background: url(../../../files/CFSA/programme.png) no-repeat 0 0;
+		background: url(../images/programme.png) no-repeat 0 0;
 	}
 
 	#offre #programme .service {
@@ -561,7 +561,7 @@ header {
 		width: 101px;
 		height: 111px;
 		padding: 21px 19px;
-		background: url(../../../files/CFSA/fidelisation.png) no-repeat 0 0;
+		background: url(../images/fidelisation.png) no-repeat 0 0;
 	}
 
 	#offre #programme .paiements {
@@ -570,7 +570,7 @@ header {
 		width: 111px;
 		height: 101px;
 		padding: 34px 23px 0 32px;
-		background: url(../../../files/CFSA/paiements.png) no-repeat 0 0;
+		background: url(../images/paiements.png) no-repeat 0 0;
 	}
 
 	#offre #programme .assistance {
@@ -579,7 +579,7 @@ header {
 		width: 101px;
 		height: 111px;
 		padding: 43px 20px 0 20px;
-		background: url(../../../files/CFSA/assistance.png) no-repeat 0 0;
+		background: url(../images/assistance.png) no-repeat 0 0;
 	}
 
 	#offre #programme .assurance {
@@ -588,7 +588,7 @@ header {
 		width: 111px;
 		height: 101px;
 		padding: 34px 32px 0 23px;
-		background: url(../../../files/CFSA/assurance.png) no-repeat 0 0;
+		background: url(../images/assurance.png) no-repeat 0 0;
 	}
 
 #offre img {
@@ -627,7 +627,7 @@ header {
 	width: 45px;
 	height: 44px;
 	text-indent: -9999px;
-	background: url(../../../files/CFSA/retour.png) no-repeat 0 0;
+	background: url(../images/retour.png) no-repeat 0 0;
 }
 
 #slide-offre .prev {
@@ -639,7 +639,7 @@ header {
 	height: 34px;
 	margin-top: -17px;
 	text-indent: -9999px;
-	background: url(../../../files/CFSA/prev.png) no-repeat 0 0;
+	background: url(../images/prev.png) no-repeat 0 0;
 }
 
 #slide-offre .next {
@@ -651,7 +651,7 @@ header {
 	height: 34px;
 	margin-top: -17px;
 	text-indent: -9999px;
-	background: url(../../../files/CFSA/next.png) no-repeat 0 0;
+	background: url(../images/next.png) no-repeat 0 0;
 }
 
 #slide-offre #slide-offre-1 .next {
@@ -662,7 +662,7 @@ header {
 	width: 54px;
 	height: 54px;
 	margin-top: -17px;
-	background: url(../../../files/CFSA/fleche-blanche-d.png) no-repeat 0 0;
+	background: url(../images/fleche-blanche-d.png) no-repeat 0 0;
 }
 
 #slide-offre .prev.disabled {
@@ -710,7 +710,7 @@ header {
 	#management > ul > li {
 		padding: 0 0 19px 0;
 		margin-bottom: 1px;
-		background: url(../../../files/CFSA/carte-shadow.png) no-repeat bottom right;
+		background: url(../images/carte-shadow.png) no-repeat bottom right;
 	}
 
 	.carte {
@@ -760,7 +760,7 @@ header {
 
 	#references ul li {
 		padding: 0 0 20px 0;
-		background: url(../../../files/CFSA/reference-shadow.png) no-repeat bottom right;
+		background: url(../images/reference-shadow.png) no-repeat bottom right;
 	}
 
 	#references ul li img {
@@ -917,7 +917,7 @@ header {
 		padding: 5px 5px 1px;
 		font-size: 11px;
 		color: #fff;
-		background: url(../../../files/CFSA/form-error.png) no-repeat 0 0;
+		background: url(../images/form-error.png) no-repeat 0 0;
 		z-index: 20;
 	}
 	#contact-form .col-message label.error {
