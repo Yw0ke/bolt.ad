@@ -26,7 +26,7 @@ form.simpleform select {
     color: #777;
     width: 210px;
     max-width: 100%;
-    display: block;
+    display: inline-block;
     margin-bottom: 0 0 0.25em 0;
     background: #fff;
 }

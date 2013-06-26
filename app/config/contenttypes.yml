@@ -86,20 +86,12 @@ pages:
         slug:
             type: slug
             uses: title
-        image:
-            type: image
-        teaser:
-            type: html
-            height: 150px
-        imagelist:
-            type: imagelist
         body:
             type: html
             height: 300px
         template:
             type: templateselect
             filter: '*.twig'
-    taxonomy: [ chapters ]
     sort: title
     recordsperpage: 100
 

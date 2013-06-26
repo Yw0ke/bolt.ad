@@ -1,0 +1,37 @@
+{% form_theme form 'assets/simpleforms_fields.twig' %}
+
+{% if error %}
+    <p class="simpleform-error">{{ error }}</p>
+{% endif %}
+{% if message %}
+    <p class="simpleform-message">{{ message }}</p>
+{% endif %}
+{% if not sent %}
+<form action="#" method="post" id="formStep" class="simpleform simpleform-{{ formname }}" enctype="multipart/form-data">
+	{% set lang = formname|split('_') %}
+	{% if lang[1] != 'en' %}<p>Vos coordonnées</p>{% else %}<p>Your contact details</p>{% endif %}
+    {{ form_errors(form) }}
+
+    <div class="col-champs">
+		{{ form_row(form.civilite) }}
+		{{ form_row(form.nom) }}
+		{{ form_row(form.prenom) }}
+		{{ form_row(form.email) }}
+		{{ form_row(form.fonction) }}
+		{{ form_row(form.societe) }}
+		{{ form_row(form.activite) }}
+		{{ form_row(form.adresse) }}
+		{{ form_row(form.cp) }}
+		{{ form_row(form.telephone) }}
+    </div>
+
+    <div class="col-message">
+       {{ form_row(form.message) }}
+       <input type="submit" name="submit" value="{% if lang[1] != 'en' %}VALIDER{% else %}SUBMIT{% endif %}" class="simpleform-submit" />
+    </div>
+
+    
+    
+    {% if lang[1] != 'en' %}<p class="small">* champs obligatoires</p>{% else %}<p class="small">* Required information</p>{% endif %}
+</form>
+{% endif %}

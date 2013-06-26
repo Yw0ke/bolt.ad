@@ -1,12 +1,27 @@
-{% set lang = app.paths.current|split('?') %}
+{% set values = app.paths.current|split('?') %}
 
-{% if lang[1] != 'en' %}
+{% set params = values[1]|split('=') %}
+
+{% if params[1] != 'en' %}					{# Si la valeur est fr #}
 	{% include '_header.twig' %}
-	{% include '_content.twig' %}
+	
+	{% if params[0] == 'partner' %}				{# On check si on souhaite accéder à l'espace courtier FR #}
+		{% include '_contact.twig' %}
+	{% else  %}
+		{% include '_content.twig' %}			{# Sinon on est cherche l'index FR #}
+	{% endif %}
+	
 	{% include '_footer.twig' %}
-{% else %}
+	
+{% else %}									{# La valeur est donc en #}
 	{% include '_header_en.twig' %}
-	{% include '_content_en.twig' %}
+	
+	{% if params[0] == 'partner' %}				{# On check si on souhaite accéder à l'espace courtier EN #}
+		{% include '_contact_en.twig' %}
+	{% else %}
+		{% include '_content_en.twig' %}
+	{% endif %}
+	
 	{% include '_footer_en.twig' %}
 {% endif %}
 

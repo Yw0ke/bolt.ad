@@ -308,11 +308,9 @@
 
             <div id="management">
                 <h2>Management</h2>
-
+				{% setcontent records = "managers" %}
                 <ul class="cf">
-                	{% setcontent records = "managers" %}
                 	{% for record in records %}
-						
                 		<li {% if loop.index is divisibleby(2) %}class="right"{% endif %}>
                         	<div class="carte cf editable">
                         	<img src="{{ paths.files }}{{ record.photo }}" alt="{{ record.name }}" />
@@ -414,77 +412,5 @@
                 <p>Merci de remplir le formulaire ci-dessous afin que nous puissions vous contacter rapidement</p>
 
 				{{ simpleform('contact_fr') }}
-                
-                {# <form id="formStep" action="index.php#contact-form" method="POST">
-                    <p>Vos coordonnées</p>
-
-                    <div class="col-champs">
-                        <div>
-                            <label for="civilite">Civilité*</label>
-                            <select name="civilite" id="civilite" required="required">
-                                <option value=""></option>
-                                <option value="mlle">Mlle</option>
-                                <option value="mme">Mme</option>
-                                <option value="m">M</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="nom">Nom*</label>
-                            <input type="text" name="nom" id="nom" required="required" />
-                        </div>
-
-                        <div>
-                            <label for="prenom">Prénom</label>
-                            <input type="text" name="prenom" id="prenom" />
-                        </div>
-
-                        <div>
-                            <label for="email">Email*</label>
-                            <input type="text" name="email" id="email" required="required" />
-                        </div>
-
-                        <div>
-                            <label for="fonction">Fonction*</label>
-                            <input type="text" name="fonction" id="fonction" required="required" />
-                        </div>
-
-                        <div>
-                            <label for="societe">Sociéte*</label>
-                            <input type="text" name="societe" id="societe" required="required" />
-                        </div>
-
-                        <div>
-                            <label for="activite">Activité</label>
-                            <input type="text" name="activite" id="activite" />
-                        </div>
-
-                        <div>
-                            <label for="adresse">Adresse</label>
-                            <input type="text" name="adresse" id="adresse" />
-                        </div>
-
-                        <div>
-                            <label for="cp">Code postal</label>
-                            <input type="text" name="cp" id="cp" pattern="[O-9]*"/>
-                        </div>
-
-                        <div>
-                            <label for="telephone">Téléphone*</label>
-                            <input type="text" name="telephone" id="telephone" required="required" />
-                        </div>
-                        <div>
-                            <input type="text" name="info" id="info" value="" />
-                        </div>
-                    </div>
-
-                    <div class="col-message">
-                        <label for="message">Votre message</label>
-                        <textarea name="message" id="message" required="required"></textarea>
-
-                        <input type="submit" value="Valider" />
-                    </div>
-
-                    <p class="small">* champs obligatoires</p>
-                </form>
-            </div> #}
+			
+			</div>

@@ -951,25 +951,25 @@ header {
 /*************************/
 /*      Sous-pages       */
 /*************************/
-.sous-page #content {
+#content {
 	margin-top: 250px;
 	color: #2a454b;
 }
-	.sous-page #content h2 {
+#content h2 {
 		margin: 20px 0;
 		padding: 0;
 	}
-	.sous-page #content p {
+#content p {
 		margin-bottom: 20px;
 	}
-		.sous-page #content p.address {
+#content p.address {
 			font-size: 20px;
 			font-weight: bold;
 		}
-	.sous-page #content a {
+#content a {
 		color: #2a454b;
 	}
-		.sous-page #content a.email {
+#content a.email {
 			font-weight: bold;
 			font-style: italic;
 		}

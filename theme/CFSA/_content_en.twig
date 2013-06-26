@@ -304,17 +304,15 @@
 
             <div id="management">
                 <h2>Management</h2>
-
+				{% setcontent records = "managers" %}
                 <ul class="cf">
-                    {% setcontent records = "managers" %}
                 	{% for record in records %}
-						
                 		<li {% if loop.index is divisibleby(2) %}class="right"{% endif %}>
                         	<div class="carte cf editable">
                         	<img src="{{ paths.files }}{{ record.photo }}" alt="{{ record.name }}" />
                         	<p class="nom">{{ record.name }}</p>
                             <p class="fonction">{{ record.fonction }}</p>
-                        	{{ record.text_en }}
+                        	{{ record.text_fr }}
                 	{% endfor %}
                 </ul>
             </div>
@@ -326,15 +324,15 @@
             <div id="references">
                 <h2>Clients</h2>
                 {% setcontent records = "références" %}
-	               <ul class="cf">
-                	{% for record in records %}
-                		<li {% if loop.index is divisibleby(2) %}class="right"{% endif %}>
-                        <div class="carte cf">
-	                        <img src="{{ paths.files }}{{ record.photo }}" alt="{{ record.name }}" />
-                        <p class="editable">{{ record.text_en }}</p>
-	                        </div>
-	                    </li>
-                	{% endfor %}
+                <ul class="cf">
+                {% for record in records %}
+                	<li {% if loop.index is divisibleby(2) %}class="right"{% endif %}>
+	                    <div class="carte cf">
+		                	<img src="{{ paths.files }}{{ record.photo }}" alt="{{ record.name }}" />
+	                    <p class="editable">{{ record.text_en }}</p>
+		                </div>
+	                </li>
+                {% endfor %}
                 </ul>
             </div>
 
@@ -344,7 +342,7 @@
 
             <div id="partenaires">
                 <h2>Partners</h2>
-				{% setcontent records = "partenaires" %}
+ 				{% setcontent records = "partenaires" %}
                 <ul class="cf">
                 {% for record in records %}
                     <li><img src="{{ paths.files }}{{ record.photo }}" alt="{{ record.name }}" /></li>
@@ -376,12 +374,12 @@
                     <div class="acces">
                         <p>
                             Nearest metro stations<br/>
-                            Chaussee dâ€™Antin â€“ la Fayette â€“  Lines 7 and 9<br/>
-                            Auber â€“ RER Line A
+                            Chaussee d’Antin – la Fayette –  Lines 7 and 9<br/>
+                            Auber – RER Line A
                         </p>
 
                         <p>
-                            Tel : +Â 33 (0) 1 44 69 90 55<br/>
+                            Tel : + 33 (0) 1 44 69 90 55<br/>
                             Fax : + 33 (0) 1 42 93 93 60
                         </p>
                     </div>
@@ -405,79 +403,10 @@
             </div>
 
             <div id="contact-form">
+                
                 <p>You are a broker and would like to develop an affinity programme for one of your clients ?<br/>We can help you to deliver innovative turnkey solutions adapted to your needs</p>
                 <p>Thank you for completing this form so we can get back to you as soon as possible</p>
 
-                <form id="formStep" action="index_en.php#contact-form" method="POST">
-                    <p>Your contact details</p>
-
-                    <div class="col-champs">
-                        <div>
-                            <label for="civilite">Greeting*</label>
-                            <select name="civilite" id="civilite" required="required">
-                                <option value=""></option>
-                                <option value="mlle">Mss</option>
-                                <option value="mme">Mrs</option>
-                                <option value="m">Mr</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="nom">Surname*</label>
-                            <input type="text" name="nom" id="nom" required="required" />
-                        </div>
-
-                        <div>
-                            <label for="prenom">First name</label>
-                            <input type="text" name="prenom" id="prenom" />
-                        </div>
-
-                        <div>
-                            <label for="email">E-mail address*</label>
-                            <input type="text" name="email" id="email" required="required" />
-                        </div>
-
-                        <div>
-                            <label for="fonction">Job title*</label>
-                            <input type="text" name="fonction" id="fonction" required="required" />
-                        </div>
-
-                        <div>
-                            <label for="societe">Company name*</label>
-                            <input type="text" name="societe" id="societe" required="required" />
-                        </div>
-
-                        <div>
-                            <label for="activite">Activity</label>
-                            <input type="text" name="activite" id="activite" />
-                        </div>
-
-                        <div>
-                            <label for="adresse">Address</label>
-                            <input type="text" name="adresse" id="adresse" />
-                        </div>
-
-                        <div>
-                            <label for="cp">Postal code</label>
-                            <input type="text" name="cp" id="cp" pattern="[O-9]*"/>
-                        </div>
-
-                        <div>
-                            <label for="telephone">Telephone*</label>
-                            <input type="text" name="telephone" id="telephone" required="required" />
-                        </div>
-                        <div>
-                            <input type="text" name="info" id="info" value="" />
-                        </div>
-                    </div>
-
-                    <div class="col-message">
-                        <label for="message">Your message</label>
-                        <textarea name="message" id="message" required="required"></textarea>
-
-                        <input type="submit" value="Submit" />
-                    </div>
-
-                    <p class="small">* Required information</p>
-                </form>
+                {{ simpleform('contact_en') }}
+                
             </div>
