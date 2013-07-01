@@ -50,7 +50,11 @@
             </div>
 
             <div id="demarche" class="cf">
-                <h2>La démarche CFSA</h2>
+                <h2>La démarche CFSA
+{{ 'hi'|trans }}
+{{ app.translator.trans('translation_key') }}
+{% trans %}hi{% endtrans %}
+                </h2>
 				
                 <ul>
                     <li class="cf">

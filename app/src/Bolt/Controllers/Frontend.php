@@ -2,10 +2,14 @@
 
 namespace Bolt\Controllers;
 
+
+
 use Silex;
 use Silex\ControllerProviderInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+
+use test\test;
 
 class Frontend implements ControllerProviderInterface
 {
@@ -86,6 +90,23 @@ class Frontend implements ControllerProviderInterface
 
     function homepage(Silex\Application $app)
     {
+    	
+    	$emMysql = $em = $app['orm.em'];
+    	
+    	$test = new test();
+    	
+    	var_dump($test);
+    	die;
+    	
+    	
+    	$emMysql->persist($test);
+    	$emMysql->flush();
+    	
+    	
+    	var_dump($emMysql);
+    	die;
+    	
+    	
         if (!empty($app['config']['general']['homepage_template'])) {
             $template = $app['config']['general']['homepage_template'];
             $content = $app['storage']->getContent($app['config']['general']['homepage']);

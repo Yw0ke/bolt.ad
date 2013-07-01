@@ -84,7 +84,72 @@ $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 $app->register(new Silex\Provider\FormServiceProvider());
 $app->register(new Silex\Provider\ValidatorServiceProvider());
-$app->register(new Silex\Provider\TranslationServiceProvider(), array());
+
+//Translation Yw0ke
+$app->register(new Silex\Provider\TranslationServiceProvider(), array('locale_fallback'           => 'en'));
+
+use Symfony\Component\Translation\Loader\YamlFileLoader;
+ 
+$app['translator'] = $app->share($app->extend('translator', function($translator, $app) {
+	$translator->addLoader('yaml', new YamlFileLoader());
+	 
+	// Ajout des fichiers de ressources de langue
+	$translator->addResource('yaml', __DIR__.'/locales/en.yml', 'en');
+	$translator->addResource('yaml', __DIR__.'/locales/fr.yml', 'fr');
+	 
+	return $translator;
+}));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Doctrine ORM Yw0ke
+$app->register(new Silex\Provider\DoctrineServiceProvider, array(
+    "db.options" => array(
+        'driver'        => 'pdo_mysql',
+	    'host'          => 'localhost',
+	    'dbname'        => 'bolt.ad',
+	    'user'          => 'root',
+	    'password'      => 'inconu',
+	    'charset'       => 'utf8',
+	    'driverOptions' => array(1002 => 'SET NAMES utf8',),
+    ),
+));
+
+$app->register(new Dflydev\Silex\Provider\DoctrineOrm\DoctrineOrmServiceProvider, array(
+    "orm.proxies_dir" => "/proxies",
+    "orm.em.options" => array(
+        "mappings" => array(
+            // Using actual filesystem paths
+            array(
+                "type" => "annotation",
+                "namespace" => "test",
+                "path" => __DIR__."/src/test/Entities/test",
+            	"use_simple_annotation_reader" => false,
+            ),
+        ),
+    ),
+));
+
+
+
+
+
+
+
+
 
 // Loading stub functions for when intl / IntlDateFormatter isn't available.
 if (!function_exists('intl_get_error_code')) {

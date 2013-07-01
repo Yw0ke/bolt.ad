@@ -1,12 +1,22 @@
 <?php
+$url = $app['paths']['current'];
+$array = explode('/', $url);
+$Frontend = new Bolt\Controllers\Frontend();
 
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+if (isset($array[2]) && $array[2] != '')
+{
+	$app['locale'] = $array[2];
+	$app['translator']->setLocale($array[2]);
+	$app->mount('/{_locale}', $Frontend);
+	
+}
+elseif ($array[2] == ''){
+	$app->mount('', $Frontend);
+}
 
 // Mount the 'backend' on the branding:path setting. Defaults to '/bolt'.
 $app->mount($app['config']['general']['branding']['path'], new Bolt\Controllers\Backend());
 $app->mount('/async', new Bolt\Controllers\Async());
-$app->mount('', new Bolt\Controllers\Frontend());
 
 $app->before(function () use ($app) {
 

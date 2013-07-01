@@ -25,7 +25,8 @@
         "symfony/twig-bridge": "~2.3",
         "symfony/validator": "~2.3",
         "symfony/yaml": "~2.3",
-        "twig/twig": ">=1.8,<2.0-dev"
+        "twig/twig": ">=1.8,<2.0-dev",
+        "dflydev/doctrine-orm-service-provider": "1.0.*@dev"
     },
     "require-dev": {
         "phpunit/php-code-coverage": "1.2.*@dev",
@@ -36,7 +37,8 @@
     "autoload": {
         "psr-0": {
             "Bolt": "app/src/",
-            "Bolt\\Tests": "app/tests"
+            "Bolt\\Tests": "app/tests",
+            "Entities": "src/test/Entities/"
         }
     }
 }
